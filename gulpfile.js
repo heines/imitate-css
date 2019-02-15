@@ -26,7 +26,7 @@ var pugOptions = {
 
 //Sass
 gulp.task('scss', function () {
-  gulp.src(paths.scss + '**/*.scss')
+  return gulp.src(paths.scss + '**/*.scss')
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
     .pipe(sass(sassOptions))
     .pipe(autoprefixer())
