@@ -48,9 +48,9 @@ gulp.task('browser-sync', () => {
       baseDir: paths.html
     }
   });
-  gulp.watch(paths.js + "**/*.js", ['reload']);
-  gulp.watch(paths.html + "**/*.html", ['reload']);
-  gulp.watch(paths.css + "**/*.css", ['reload']);
+  gulp.watch(paths.js + "**/*.js", gulp.task('reload'));
+  gulp.watch(paths.html + "**/*.html", gulp.task('reload'));
+  gulp.watch(paths.css + "**/*.css", gulp.task('reload'));
 });
 gulp.task('reload', () => {
   browserSync.reload();
@@ -58,8 +58,9 @@ gulp.task('reload', () => {
 
 //watch
 gulp.task('watch', function () {
-  gulp.watch(paths.scss + '**/*.scss', ['scss']);
-  gulp.watch([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'], ['pug']);
+  gulp.watch(paths.scss + '**/*.scss', gulp.task('scss'));
+  gulp.watch([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'], gulp.task('pug'));
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+// gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', gulp.series( gulp.parallel('browser-sync', 'watch')));
