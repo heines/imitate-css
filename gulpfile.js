@@ -1,66 +1,31 @@
-// https://qiita.com/KazuyoshiGoto/items/8b788279490a6dd006d9
-var gulp = require('gulp');
-var notify = require("gulp-notify");
-var plumber = require("gulp-plumber");
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var pug = require('gulp-pug');
-var browserSync = require("browser-sync");
+const gulp = require('gulp');
+const requireDir = require('require-dir');
 
-//setting : paths
-var paths = {
-  'scss': './src/sass/',
-  'css': './docs/css/',
-  'pug': './src/pug/',
-  'html': './docs/',
-  'js': './docs/js/'
-}
-//setting : Sass Options
-var sassOptions = {
-  outputStyle: 'compressed'
-}
-//setting : Pug Options
-var pugOptions = {
-  pretty: true
-}
+const $ = require('./gulp/plugins');
 
-//Sass
-gulp.task('scss', function () {
-  return gulp.src(paths.scss + '**/*.scss')
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
-    .pipe(sass(sassOptions))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.css))
-});
+requireDir('./gulp/tasks');
 
-//Pug
-gulp.task('pug', () => {
-  return gulp.src([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'])
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
-    .pipe(pug(pugOptions))
-    .pipe(gulp.dest(paths.html));
-});
+gulp.task('default', gulp.series(
+  'cleanDest',
+  gulp.parallel('pug', 'sass', 'scripts', 'copyToDest'),
+  gulp.parallel('serve', 'watch'),
+));
 
-//Browser Sync
-gulp.task('browser-sync', () => {
-  browserSync({
-    server: {
-      baseDir: paths.html
-    }
-  });
-  gulp.watch(paths.js + "**/*.js", gulp.task('reload'));
-  gulp.watch(paths.html + "**/*.html", gulp.task('reload'));
-  gulp.watch(paths.css + "**/*.css", gulp.task('reload'));
-});
-gulp.task('reload', () => {
-  browserSync.reload();
-});
+gulp.task('build', gulp.series(
+  'cleanDest',
+  gulp.parallel('pug', 'sass', 'copyToDest'),
+  'cleanBuild',
+  gulp.parallel('replaceHtml', 'cleanCss', 'scripts', 'imagemin'),
+  gulp.parallel('copyToBuild', 'copyPhpToBuild', 'copyCmsToBuild'),
+  'sitemap',
+));
 
-//watch
-gulp.task('watch', function () {
-  gulp.watch(paths.scss + '**/*.scss', gulp.task('scss'));
-  gulp.watch([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'], gulp.task('pug'));
-});
+gulp.task('buildHtml', gulp.series(
+  'pug',
+  'replaceHtml',
+));
 
-// gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('default', gulp.series( gulp.parallel('browser-sync', 'watch')));
+gulp.task('buildCss', gulp.series(
+  'sass',
+  'cleanCss',
+));

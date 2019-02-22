@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "websiteName": "imitate-css",
+    "keywords": "css",
+    "themeColor": "#ffffff"
+  },
+  "pages": {
+    "index": {
+      "id": "index",
+      "title": "test",
+      "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
+      "path": "/"
+    },
+    "imitate": {
+      "index": {
+        "id": "index",
+        "title": "",
+        "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
+        "path": "/imitate"
+      },
+      "date_0221": {
+        "id": "date_0221",
+        "title": "0221",
+        "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
+        "path": "/imitate/0221.html"
+      }
+    }
+  }
+}
