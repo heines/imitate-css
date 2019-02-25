@@ -7,8 +7,13 @@ html(lang="ja")
   head
     include ./_layout/_head.pug
   body
-  h1 imitate css
-  a.js-scroll-item.js-hover(
-    href = '/imitate-css/imitate/0221.html',
-    )
-    |test
+    .p-index-content
+      h1
+        |imitate
+      ul
+        li
+          a(href="./moves/") Pjax with preload
+      script.
+        const ua = window.navigator.userAgent;
+        const link = document.querySelector('link[as=style]');
+        if (ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';

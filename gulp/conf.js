@@ -1,10 +1,9 @@
 // 設定ファイル
 // 対象パスやオプションを指定
 
-const DOMAIN = module.exports.DOMAIN = 'http://www.xxx.com';
+const DOMAIN = module.exports.DOMAIN = 'https://ykob.github.io';
 const DIR = module.exports.DIR =  {
-   // 語尾にスラッシュはつけない
-  PATH: '/imitate-css',
+  PATH: '/imitate',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'docs'
@@ -12,6 +11,7 @@ const DIR = module.exports.DIR =  {
 
 module.exports.serve = {
   dest: {
+    //tunnel: 'test',
     notify: false,
     startPath: `${DIR.PATH}/`,
     ghostMode: false,
@@ -19,19 +19,20 @@ module.exports.serve = {
       baseDir: DIR.DEST,
       index: 'index.html',
       routes: {
-        [DIR.PATH]: `${DIR.DEST}${DIR.PATH}/`
+        [DIR.PATH]: `${DIR.DEST}/`
       }
     }
   },
   build: {
+    //tunnel: 'test',
     notify: false,
-    startPath: DIR.PATH,
+    startPath: `${DIR.PATH}/`,
     ghostMode: false,
     server: {
       baseDir: DIR.BUILD,
       index: 'index.html',
       routes: {
-        [DIR.PATH]: `${DIR.BUILD}${DIR.PATH}/`
+        [DIR.PATH]: `${DIR.BUILD}/`
       }
     }
   }
@@ -42,16 +43,20 @@ module.exports.scripts = {
     `./${DIR.SRC}/**/*.js`,
   ],
   dest: {
-    development: `./${DIR.DEST}${DIR.PATH}/js`,
-    production: {
-      static: `./${DIR.BUILD}${DIR.PATH}/js`,
-      cms: `./${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/js`,
-    },
+    development: `./${DIR.DEST}/js/`,
+    production: `./${DIR.BUILD}/js/`,
   },
   webpack: {
-    entry: `./${DIR.SRC}/js/main.js`,
+    entry: [
+      ,
+      ,
+    ],
+    entry: {
+      main: `./${DIR.SRC}/js/main.js`,
+      main_with_preload: `./${DIR.SRC}/js/main_with_preload.js`,
+    },
     output: {
-      filename: `main.js`
+      filename: `[name].js`
     },
     module: {
       rules: [
@@ -70,21 +75,13 @@ module.exports.scripts = {
   },
 };
 
-module.exports.vendorScripts = {
-  src: [
-    `./${DIR.SRC}/js/vendor/*.js`,
-  ],
-  concat: 'vendor.js',
-  dest: `./${DIR.DEST}${DIR.PATH}/js/`
-};
-
 module.exports.pug = {
   src: [
     `${DIR.SRC}/**/*.pug`,
     `!${DIR.SRC}/**/_**/*.pug`,
     `!${DIR.SRC}/**/_*.pug`
   ],
-  dest: `${DIR.DEST}${DIR.PATH}`,
+  dest: `${DIR.DEST}`,
   opts: {
     pretty: true
   },
@@ -99,102 +96,88 @@ module.exports.sass = {
     `!${DIR.SRC}/**/_**/*.{sass,scss}`,
     `!${DIR.SRC}/**/_*.{sass,scss}`
   ],
-  dest: `${DIR.DEST}${DIR.PATH}/css`,
+  dest: `${DIR.DEST}/css`,
+  browsers: [
+    'last 2 versions',
+    'ie >= 11',
+    'Android >= 4',
+    'ios_saf >= 9',
+  ]
 };
 
 module.exports.replace = {
   html: {
     src: [
-      `${DIR.DEST}${DIR.PATH}/**/*.html`
+      `${DIR.DEST}/**/*.html`
     ],
-    dest: `${DIR.BUILD}${DIR.PATH}`,
+    dest: `${DIR.BUILD}`,
+    path: `${DIR.PATH}`
+  }
+};
+
+module.exports.sprite = {
+  src: [
+    `${DIR.SRC}/img/sprite/**/*.png`
+  ],
+  dest: {
+    img: `${DIR.DEST}${DIR.PATH}/img/common`,
+    css: `${DIR.SRC}/css/foundation`
+  },
+  opts: {
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    imgPath: '../img/common/sprite.png',
+    padding: 10,
+    cssOpts: {
+      functions: false
+    }
   }
 };
 
 module.exports.cleanCss = {
-  src: `${DIR.DEST}${DIR.PATH}/css/main.css`,
-  dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/css`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
-  },
+  src: `${DIR.DEST}/css/main.css`,
+  dest: `${DIR.BUILD}/css`
+};
+
+module.exports.uglify = {
+  src: [
+    `./${DIR.DEST}/js/vendor.js`,
+    `./${DIR.DEST}/js/main.js`,
+  ],
+  dest: `${DIR.BUILD}/js`,
+  opts: {
+  }
 };
 
 module.exports.copy = {
   dest: {
     src: [
       `${DIR.SRC}/img/**/*.*`,
+      `!${DIR.SRC}/img/sprite/*.*`,
       `${DIR.SRC}/font/**/*.*`,
-      `${DIR.SRC}/json/**/*.*`,
     ],
-    dest: `${DIR.DEST}${DIR.PATH}`,
+    dest: `${DIR.DEST}`,
     opts: {
       base: `${DIR.SRC}`
     }
   },
   build: {
     src: [
-      `${DIR.DEST}${DIR.PATH}/img/**/*.ico`,
-      `${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
-      `${DIR.DEST}${DIR.PATH}/font/**/*.*`,
-      `${DIR.DEST}${DIR.PATH}/json/**/*.*`,
+      `${DIR.DEST}/img/**/*.ico`,
+      `${DIR.DEST}/font/**/*.*`,
     ],
-    dest: {
-      static: `${DIR.BUILD}${DIR.PATH}`,
-      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets`,
-    },
+    dest: `${DIR.BUILD}`,
     opts: {
       base: `${DIR.DEST}`
-    }
-  },
-  php: {
-    src: [
-      `${DIR.SRC}/html/**/*.php`,
-    ],
-    dest: {
-      static: `${DIR.BUILD}${DIR.PATH}`,
-      cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/php`,
-    },
-    opts: {
-      base: `${DIR.SRC}/html/`
-    }
-  },
-  cms: {
-    src: [
-      `${DIR.SRC}/wp-theme/**/*.php`,
-      `${DIR.SRC}/wp-theme/**/screenshot.png`,
-    ],
-    dest: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}`,
-    opts: {
-      base: `${DIR.SRC}/wp-theme/`
     }
   }
 };
 
 module.exports.imagemin = {
   src: [
-    `${DIR.DEST}${DIR.PATH}/**/*.{jpg,jpeg,png,gif,svg}`,
-    `!${DIR.DEST}${DIR.PATH}/img/**/no_compress/*.*`,
+    `${DIR.DEST}/**/*.{jpg,jpeg,png,gif,svg}`
   ],
-  dest: {
-    static: `${DIR.BUILD}${DIR.PATH}/img`,
-    cms: `${DIR.BUILD}${DIR.PATH}${DIR.CMS}/assets/img`,
-  },
-  opts: {
-    pngquant: {
-      quality: 80,
-      speed: 1,
-    },
-    mozjpeg: {
-      quality: 80,
-      progressive: true,
-    },
-    svgo: {
-      plugins: [
-        { removeViewBox: false },
-        { cleanupIDs: true },
-      ]
-    },
-  }
+  dest: `${DIR.BUILD}/img`
 };
 
 module.exports.clean = {
@@ -204,26 +187,4 @@ module.exports.clean = {
   build: {
     path: [`${DIR.BUILD}`]
   }
-};
-
-module.exports.sitemap = {
-  src: [
-    `${DIR.BUILD}${DIR.PATH}/**/*.html`,
-    `!${DIR.BUILD}${DIR.PATH}/404/*.html`,
-  ],
-  opts: {
-    siteUrl: DOMAIN,
-    fileName: 'sitemap-static.xml',
-    mappings: [
-      {
-        pages: [`index.html`],
-        priority: 1.0,
-      },
-      {
-        pages: [`**/*.html`],
-        priority: 0.1,
-      }
-    ]
-  },
-  dest: `${DIR.BUILD}${DIR.PATH}/`
 };

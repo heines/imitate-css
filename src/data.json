@@ -1,28 +1,22 @@
 {
   "meta": {
-    "websiteName": "imitate-css",
-    "keywords": "css",
-    "themeColor": "#ffffff"
+    "websiteName": "ImitateCss",
+    "keywords": "imitate",
+    "themeColor": "#111111"
   },
   "pages": {
     "index": {
       "id": "index",
-      "title": "test",
+      "title": "",
       "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
       "path": "/"
     },
-    "imitate": {
+    "moves": {
       "index": {
         "id": "index",
         "title": "",
         "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
-        "path": "/imitate"
-      },
-      "date_0221": {
-        "id": "date_0221",
-        "title": "0221",
-        "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
-        "path": "/imitate/0221.html"
+        "path": "/moves/"
       }
     }
   }

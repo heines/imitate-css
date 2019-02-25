@@ -7,6 +7,7 @@ gulp.task('sass', () => {
   return gulp.src(conf.src)
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({
+      browsers: conf.browsers,
       cascade: false
     }))
     .pipe($.rename(path => {

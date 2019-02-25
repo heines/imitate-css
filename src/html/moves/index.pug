@@ -1,0 +1,19 @@
+extends ../_layout/_page.pug
+
+block vars
+  -
+    var page = data.pages.moves.index;
+
+block content
+  .p-lower-header
+    .p-lower-header__in
+      h1.p-lower-header__title
+        |Page 02
+      p.p-lower-header__excerpt.js-smooth-item
+        |It's a utility JavaScript asset that manages asynchronous page transition on a website.
+  h2.p-moves__title
+    |moves
+  nav.p-moves__nav
+    ul.p-moves__nav__list
+      li.p-moves__nav__item
+        a.p-moves__nav__link(href="https://www.google.co.jp/" ) Intro

@@ -6,6 +6,12 @@ html(lang="ja")
     include ./_head.pug
   body
     .l-page.js-pjax-page(data-page-id=page.id)
-      block content
+      .p-contents-overlay.js-pjax-overlay.is-expand
+      .p-progress.js-pjax-progress
+        .p-progress__marker
+      .l-dummy-scroll.js-dummy-scroll
+      .l-contents.js-contents
+        .js-pjax-contents
+          block content
     block script
-    //- /* script(src="/imitate-css/js/main.js" async) */
+    script(src="/imitate/js/main_with_preload.js" async)
