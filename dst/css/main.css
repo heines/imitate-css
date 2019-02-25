@@ -370,7 +370,8 @@ body {
   -webkit-font-feature-settings: 'palt';
   font-feature-settings: 'palt';
   letter-spacing: 0.08em;
-  background-color: #111; }
+  background-color: #fff;
+  color: #000; }
 
 img {
   vertical-align: top; }
@@ -390,7 +391,7 @@ select::-ms-expand {
 
 input::selection,
 textarea::selection {
-  color: #222;
+  color: #555;
   background: rgba(0, 0, 0, 0.2); }
 
 .l-contents {
@@ -422,31 +423,6 @@ textarea::selection {
     top: 0;
     right: 0;
     left: 0; }
-  .l-contents__in {
-    background-color: #fff; }
-    @media all and (min-width: 1025px) {
-      .l-contents__in {
-        margin-right: 10%;
-        margin-bottom: 14.64129%;
-        margin-left: 10%;
-        padding-top: 7.32064%;
-        padding-bottom: 7.32064%; } }
-    @media all and (min-width: 768px) and (max-width: 1024px) {
-      .l-contents__in {
-        margin-right: 30px;
-        margin-bottom: 200px;
-        margin-left: 30px;
-        padding-top: 100px;
-        padding-bottom: 100px; } }
-    @media all and (max-width: 767px) {
-      .l-contents__in {
-        margin-right: 15px;
-        margin-bottom: 100px;
-        margin-left: 15px;
-        padding-top: 50px;
-        padding-bottom: 50px; } }
-    .l-contents__in--index {
-      margin-top: -50px; }
   .l-contents--basic {
     opacity: 0; }
     .l-contents--basic.is-arrived-contents {
@@ -467,8 +443,7 @@ textarea::selection {
   z-index: 1; }
 
 .l-page {
-  visibility: visible;
-  background-color: #111; }
+  visibility: visible; }
 
 .c-button-border {
   -webkit-box-sizing: border-box;
@@ -477,7 +452,7 @@ textarea::selection {
   line-height: 1.1;
   position: relative;
   border: 0;
-  color: #222;
+  color: #555;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -519,7 +494,7 @@ textarea::selection {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #222; }
+    background-color: #555; }
   .c-button-border__label {
     display: inline-block;
     position: relative;
@@ -529,7 +504,7 @@ textarea::selection {
     display: block;
     position: absolute;
     z-index: 10;
-    background-color: #222; }
+    background-color: #555; }
   .c-button-border__line-v:before, .c-button-border__line-v:after {
     width: 2px;
     top: 0;
@@ -771,11 +746,14 @@ textarea::selection {
     transition-duration: 0.4s; }
 
 .p-index-content {
-  margin-right: 11.53846%;
-  margin-left: 11.53846%;
-  color: #fff; }
+  margin: 35px;
+  color: #555; }
+  .p-index-content ol {
+    padding-left: 20px;
+    list-style-type: lower-roman; }
   .p-index-content a {
-    color: #fff; }
+    text-decoration: none;
+    color: #555; }
 
 .p-index-header {
   width: 100vw;

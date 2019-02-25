@@ -1,8 +1,12 @@
 .p-index-content {
-  margin-right: (3 / 26) * 100%;
-  margin-left: (3 / 26) * 100%;
-  color: #fff;
+  margin: 35px;
+  color: $color-text;
+  ol {
+    padding-left: 20px;
+    list-style-type: lower-roman;
+  }
   a {
-    color: #fff;
+    text-decoration: none;
+    color: $color-text;
   }
 }
