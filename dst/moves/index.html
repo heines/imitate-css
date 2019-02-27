@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="It's a utility JavaScript asset that manages asynchronous page transition on a website.">
     <meta name="keywords" content="imitate">
-    <style>
-      body { background-color: #000; }
-      .l-page { visibility: hidden; }
-    </style>
+    <style>.l-page { visibility: hidden; }</style>
     <link rel="preload" as="style" href="/imitate/css/main.css" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="icon" href="/imitate/img/common/icon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/imitate/img/common/app_icon.png">
     <meta name="msapplication-TileImage" content="/imitate/img/common/ms_tileimage.png">
-    <meta name="msapplication-TileColor" content="#111111">
-    <meta name="theme-color" content="#111111">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#fff">
     <meta property="og:title" content="ImitateCss">
     <meta property="og:site_name" content="ImitateCss">
     <meta property="og:type" content="website">
@@ -38,7 +35,7 @@
       <div class="l-contents js-contents">
         <div class="js-pjax-contents">
           <div class="p-moves">
-            <button class="p-moves-button">x</button>
+            <h1 class="p-moves__title">moves</h1>
             <nav class="p-moves-nav js-open">
               <ul class="p-moves-nav__list">
                 <li class="p-moves-nav__item"><a class="p-moves-nav__link" href="https://www.google.co.jp/">Intro</a></li>
