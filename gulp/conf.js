@@ -1,9 +1,9 @@
 // 設定ファイル
 // 対象パスやオプションを指定
 
-const DOMAIN = module.exports.DOMAIN = 'https://ykob.github.io';
+const DOMAIN = module.exports.DOMAIN = 'https://heines.github.io';
 const DIR = module.exports.DIR =  {
-  PATH: '/imitate',
+  PATH: '/imitate-css',
   SRC: 'src',
   DEST: 'dst',
   BUILD: 'docs'
