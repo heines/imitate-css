@@ -1,15 +1,15 @@
 .p-lower-header {
   width: 100vw;
-  height: 50vh;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  text-align: center;
+  color: $color-text;
+  text-align: left;
   &__title {
     line-height: 1.1;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     @include fontSizeAll(64, 56, 42);
     font-weight: 400;
   }
