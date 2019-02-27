@@ -714,7 +714,7 @@ textarea::selection {
   right: 0;
   left: 0;
   z-index: 500;
-  background-color: #222;
+  background-color: #fff;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition-property: -webkit-transform;
@@ -918,7 +918,7 @@ textarea::selection {
   .p-progress__marker:after {
     content: '';
     display: block;
-    border: 2px solid #fff;
+    border: 2px solid #555;
     -webkit-animation-name: animateProgress;
     animation-name: animateProgress;
     -webkit-animation-duration: 0.6s;
