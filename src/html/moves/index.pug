@@ -5,10 +5,16 @@ block vars
     var page = data.pages.moves.index;
 
 block content
-  .p-moves
+  .p-moves-base
     h1.p-moves__title
       |moves
-    nav.p-moves-nav.js-open
+  .p-moves
+    button.p-moves-btn.js-nav-button
+      figure
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.8 19.8")
+          rect(x="-3.1" y="8.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.1007 9.9)" width="26" height="2")
+          rect(x="8.9" y="-3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.1007 9.9)" width="2" height="26")
+    nav.p-moves-nav.js-nav
       ul.p-moves-nav__list
         li.p-moves-nav__item
           a.p-moves-nav__link(href="https://www.google.co.jp/" ) Intro

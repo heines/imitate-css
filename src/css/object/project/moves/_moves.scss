@@ -15,8 +15,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    color: rgba(#f5cece, 0.4);
+    color: rgba(#f5cece, 0.2);
     font-size: 20vw;
     z-index: 500;
+    pointer-events: none;
   }
 }

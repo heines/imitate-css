@@ -1,0 +1,27 @@
+.p-moves-btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  position: absolute;
+  right: 5vw;
+  z-index: 1;
+  color: #f5cece;
+  background-color: transparent;
+  transition: opacity .25s ease;
+  opacity: 1;
+  outline: none;
+  appearance:none;
+  cursor: none;
+  figure {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+  }
+  svg {
+    fill: #f5cece;
+    display: block;
+  }
+}
