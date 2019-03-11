@@ -9,11 +9,11 @@
       "id": "index",
       "title": "",
       "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
-      "path": "/"
+      "path": "/imitate-css/"
     },
     "moves": {
       "index": {
-        "id": "index",
+        "id": "moves",
         "title": "",
         "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
         "path": "/moves/"

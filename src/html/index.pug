@@ -1,19 +1,17 @@
+extends ./_layout/_page.pug
+
 block vars
   -
     var page = data.pages.index;
 
-doctype html
-html(lang="ja")
-  head
-    include ./_layout/_head.pug
-  body
-    .p-index-content
-      h1
-        |imitate
-      ol
-        li
-          a(href="./moves/") moves
-      script.
-        const ua = window.navigator.userAgent;
-        const link = document.querySelector('link[as=style]');
-        if (ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';
+block content
+  .p-index-content
+    h1
+      |imitate
+    ol
+      li
+        a(href="./moves/") moves
+    script.
+      const ua = window.navigator.userAgent;
+      const link = document.querySelector('link[as=style]');
+      if (ua.indexOf('Chrome') < 0) link.rel = 'stylesheet';

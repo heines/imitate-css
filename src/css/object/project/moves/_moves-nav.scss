@@ -12,6 +12,8 @@
   color: #f5cece;
   font-family: 'Biryani', sans-serif;
   box-sizing: border-box;
+  cursor: none;
+  pointer-events: none;
   &__list {
     width: 100%;
     height: 100%;
@@ -77,6 +79,10 @@
 
   // interaction
   $moves-nav_root: &;
+  &.is-open {
+    cursor: auto;
+    pointer-events: auto;
+  }
   &.is-open &{
     &__item {
       opacity: 1;

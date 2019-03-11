@@ -94,6 +94,8 @@ export default class PjaxWithPreload {
     const responseContents = responseHtml.querySelector(`.${CLASSNAME_CONTENTS}`);
 
     // ページの中身を差し替え
+    console.log("pass js");
+    console.log(responsePage);
     this.elm.page.dataset.pageId = responsePage.dataset.pageId;
     this.elm.contents.innerHTML = responseContents.innerHTML;
     document.title = responseHtml.querySelector('title').innerHTML;
