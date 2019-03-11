@@ -1,13 +1,16 @@
 .p-moves-btn {
   width: 3rem;
   height: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
   position: absolute;
   right: 5vw;
-  z-index: 1;
+  z-index: 501;
   color: #f5cece;
   background-color: transparent;
   transition: opacity .25s ease;

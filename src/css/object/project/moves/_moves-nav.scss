@@ -61,7 +61,7 @@
     &::after {
       content: "";
       width: 100%;
-      height: 1px;
+      height: .01em;
       background-color: #f5cece;
       position: absolute;
       left: 0;
@@ -79,11 +79,10 @@
 
   // interaction
   $moves-nav_root: &;
-  &.is-open {
+  .is-open & {
     cursor: auto;
     pointer-events: auto;
-  }
-  &.is-open &{
+    z-index: 500;
     &__item {
       opacity: 1;
       transform: translateY(0);
