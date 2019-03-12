@@ -1,52 +1,18 @@
 .p-moves-body {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  background-color: #000;
-  overflow-y: scroll;
-  &__title {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    color: rgba(#f5cece, 0.2);
-    font-size: 20vw;
-    z-index: 10;
-    pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1f1f1f;
+  font-family: 'Biryani', sans-serif;
+  @include l-more-than-mobile {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    font-weight: 400;
+    letter-spacing: -.025rem;
   }
-  &__link {
-    position: relative;
-    z-index: 10;
-    color: #f5cece;
-    text-decoration: none;
-  }
-  &__contents {
-    position: relative;
-    z-index: 10;
-    padding: 10vw;
-    color: rgba(#fff, 0.5);
-    z-index: 10;
-    @include l-more-than-mobile {
-      font-size: 1.5vw;
-    }
-    @include l-mobile {
-      font-size: 1rem;
-    }
-    @include l-pc-l {
-      font-size: 1.2rem;
-    }
-
-    & rt {
-      @include l-more-than-mobile {
-        font-size: .01vw;
-      }
-    }
-    & rp, & rt {
-      @include l-mobile {
-        display: none;
-      }
-    }
+  @include l-mobile {
+    font-size: 1.4rem;
+    line-height: 1.35;
+    font-weight: 400;
+    letter-spacing: -.025rem;
   }
 }

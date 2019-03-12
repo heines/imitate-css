@@ -47,10 +47,11 @@
 @import "object/project/_lower-header";
 @import "object/project/_progress";
 
-@import "object/project/moves/_moves";
-@import "object/project/moves/_moves-base";
-@import "object/project/moves/_moves-nav";
 @import "object/project/moves/_moves-body";
+@import "object/project/moves/_moves-base";
+@import "object/project/moves/_moves-content";
+@import "object/project/moves/_moves-gh";
+@import "object/project/moves/_moves-nav";
 @import "object/project/moves/_moves-btn";
 
 // -----------------------------------------------------------------

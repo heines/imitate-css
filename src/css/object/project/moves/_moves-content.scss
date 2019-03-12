@@ -1,0 +1,54 @@
+.p-moves-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  overflow-y: scroll;
+  &__title {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: rgba(#f5cece, 0.2);
+    font-size: 20vw;
+    z-index: 10;
+    pointer-events: none;
+  }
+  &__link {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    color: #f5cece;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 11;
+  }
+  &__texts {
+    position: relative;
+    z-index: 10;
+    padding: 10vw;
+    color: rgba(#fff, 0.5);
+    z-index: 10;
+    @include l-more-than-mobile {
+      font-size: 1.5vw;
+    }
+    @include l-mobile {
+      font-size: 1rem;
+    }
+    @include l-pc-l {
+      font-size: 1.2rem;
+    }
+
+    & rt {
+      @include l-more-than-mobile {
+        font-size: .01vw;
+      }
+    }
+    & rp, & rt {
+      @include l-mobile {
+        display: none;
+      }
+    }
+  }
+}

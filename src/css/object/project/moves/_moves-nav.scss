@@ -8,12 +8,11 @@
   margin: 0;
   padding: 0 5vw;
   vertical-align: baseline;
-  background-color: #000;
   color: #f5cece;
-  font-family: 'Biryani', sans-serif;
   box-sizing: border-box;
   cursor: none;
   pointer-events: none;
+  z-index: 1;
   &__list {
     width: 100%;
     height: 100%;
@@ -62,6 +61,7 @@
       content: "";
       width: 100%;
       height: .01em;
+      min-height: 1px;
       background-color: #f5cece;
       position: absolute;
       left: 0;
