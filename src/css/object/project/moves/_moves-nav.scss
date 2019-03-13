@@ -83,6 +83,8 @@
     cursor: auto;
     pointer-events: auto;
     z-index: 500;
+    opacity: 1;
+    transition: opacity .5s ease;
     &__item {
       opacity: 1;
       transform: translateY(0);

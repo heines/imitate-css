@@ -470,12 +470,17 @@ block content
             |いていた。
             br
             |「百年はもう来ていたんだな」とこの時始めて気がついた。
-      button.p-moves-btn.js-nav-button
+      button.p-moves-btn.p-moves-btn__open.js-nav-button-open
         figure
           svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14")
             polygon(points="0,0 30,0 30,3 0,3 ")
             polygon(points="0,11 30,11 30,14 0,14 ")
       .p-moves-gh.js-nav
+        button.p-moves-btn.js-nav-button-close.p-moves-gh__btn
+          figure
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.8 19.8")
+              rect(x="-3.1" y="8.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.1007 9.9)" width="26" height="2")
+              rect(x="8.9" y="-3.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -4.1007 9.9)" width="2" height="26")
         nav.p-moves-nav
           ul.p-moves-nav__list
             li.p-moves-nav__item

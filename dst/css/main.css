@@ -1054,6 +1054,9 @@ html {
   background-color: #181818;
   background-size: 100rem auto;
   background-position: 50% 0; }
+  .p-moves-gh__btn {
+    opacity: 0;
+    pointer-events: none; }
   .p-moves-gh__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1158,6 +1161,12 @@ html {
     z-index: 500; }
   .is-open .p-moves-gh__link {
     z-index: 500;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    pointer-events: auto; }
+  .is-open .p-moves-gh__btn {
+    z-index: 510;
     opacity: 1;
     pointer-events: auto; }
 
@@ -1297,7 +1306,10 @@ html {
   .is-open .p-moves-nav {
     cursor: auto;
     pointer-events: auto;
-    z-index: 500; }
+    z-index: 500;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease; }
     .is-open .p-moves-nav__item {
       opacity: 1;
       -webkit-transform: translateY(0);
@@ -1425,8 +1437,6 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  opacity: 1;
-  z-index: 501;
   color: #f5cece;
   background-color: transparent;
   -webkit-transition: opacity .25s ease;
@@ -1434,10 +1444,11 @@ html {
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
+  appearance: none;
+  z-index: 15; }
   .p-moves-btn figure {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: block; }
   .p-moves-btn svg {
     fill: #f5cece;

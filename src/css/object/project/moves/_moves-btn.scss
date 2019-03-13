@@ -7,16 +7,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  z-index: 501;
   color: #f5cece;
   background-color: transparent;
   transition: opacity .25s ease;
   outline: none;
   appearance:none;
+  z-index: 15;
   figure {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: block;
   }
   svg {

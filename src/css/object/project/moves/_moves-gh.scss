@@ -6,6 +6,10 @@
   background-color: #181818;
   background-size: 100rem auto;
   background-position: 50% 0;
+  &__btn {
+    opacity: 0;
+    pointer-events: none;
+  }
   &__link {
     display: flex;
     align-items: center;
@@ -91,7 +95,6 @@
     font-size: 100%;
   }
 
-
   // interaction
 
   &.is-open {
@@ -99,6 +102,12 @@
   }
   .is-open &__link {
     z-index: 500;
+    opacity: 1;
+    transition: opacity .5s ease;
+    pointer-events: auto;
+  }
+  .is-open &__btn {
+    z-index: 510;
     opacity: 1;
     pointer-events: auto;
   }
