@@ -1028,7 +1028,7 @@ textarea::selection {
     z-index: 10; }
     @media all and (max-width: 767px) {
       .p-moves-content__texts {
-        padding-top: 10vw;
+        padding-top: 15vw;
         font-size: 1.25rem;
         line-height: 2; } }
     @media all and (min-width: 768px) {
