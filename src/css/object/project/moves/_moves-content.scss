@@ -32,7 +32,7 @@
     color: rgba(#fff, 0.5);
     z-index: 10;
     @include l-mobile {
-      padding-top: 15vw;
+      padding-top: 10vw;
       font-size: 1.25rem;
       line-height: 2;
     }
@@ -46,7 +46,7 @@
     }
     ruby {
       rt {
-        font-size: .001vw;
+        font-size: .01vw;
       }
     }
   }

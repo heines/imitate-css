@@ -1,13 +1,8 @@
-html {
-  font-size: 10px;
-  font-weight: 400;
-  background-color: #1f1f1f;
-}
-
 .p-moves-body {
   height: 100vh;
   width: 100vw;
   font-family: 'Biryani', sans-serif;
+  background-color: #1f1f1f;
   @include l-more-than-mobile {
     font-size: 2.4rem;
     line-height: 1.35;

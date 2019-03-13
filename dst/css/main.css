@@ -961,15 +961,11 @@ textarea::selection {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s; }
 
-html {
-  font-size: 10px;
-  font-weight: 400;
-  background-color: #1f1f1f; }
-
 .p-moves-body {
   height: 100vh;
   width: 100vw;
-  font-family: 'Biryani', sans-serif; }
+  font-family: 'Biryani', sans-serif;
+  background-color: #1f1f1f; }
   @media all and (min-width: 768px) {
     .p-moves-body {
       font-size: 2.4rem;
@@ -1032,7 +1028,7 @@ html {
     z-index: 10; }
     @media all and (max-width: 767px) {
       .p-moves-content__texts {
-        padding-top: 15vw;
+        padding-top: 10vw;
         font-size: 1.25rem;
         line-height: 2; } }
     @media all and (min-width: 768px) {
@@ -1044,7 +1040,7 @@ html {
         font-size: 1.75rem;
         line-height: 2; } }
     .p-moves-content__texts ruby rt {
-      font-size: .001vw; }
+      font-size: .01vw; }
 
 .p-moves-gh {
   height: 100%;
