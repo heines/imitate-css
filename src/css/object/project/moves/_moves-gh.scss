@@ -12,6 +12,8 @@
     position: absolute;
     left: 5vw;
     bottom: 4rem;
+    text-decoration: none;
+    pointer-events: none;
     color: #f5cece;
     font-weight: 500;
     line-height: 2.5rem;
@@ -19,8 +21,6 @@
     background-color: inherit;
     z-index: 1;
     opacity: 0;
-    text-decoration: none;
-    pointer-events: none;
     @include l-more-than-mobile {
       line-height: 4rem;
     }
@@ -32,7 +32,8 @@
       position: absolute;
       background-color: #f5cece;
       content: '';
-      // transform: scaleX(0);
+      transform: scaleX(0);
+      opacity: 0;
       animation-name: underline-out;
       animation-duration: 0.35s;
       animation-timing-function: ease;
@@ -55,8 +56,18 @@
         left: 2.5rem;
         bottom: .4rem;
       }
-      &:hover {
-        transform: scaleX(1);
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+        animation-name: underline-in;
+        animation-duration: 0.35s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
       }
     }
   }
@@ -90,5 +101,25 @@
     z-index: 500;
     opacity: 1;
     pointer-events: auto;
+  }
+}
+@keyframes underline-out {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+@keyframes underline-in {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }
