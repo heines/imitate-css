@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Biryani:600");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -962,10 +961,14 @@ textarea::selection {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s; }
 
+html {
+  font-size: 10px;
+  font-weight: 400;
+  background-color: #1f1f1f; }
+
 .p-moves-body {
   height: 100vh;
   width: 100vw;
-  background-color: #1f1f1f;
   font-family: 'Biryani', sans-serif; }
   @media all and (min-width: 768px) {
     .p-moves-body {
@@ -1017,30 +1020,30 @@ textarea::selection {
     top: 3rem;
     left: 3rem;
     color: #f5cece;
+    font-size: 1.2rem;
     text-decoration: none;
     cursor: pointer;
     z-index: 11; }
   .p-moves-content__texts {
     position: relative;
-    z-index: 10;
     padding: 10vw;
+    font-family: 'Noto Serif JP', serif;
     color: rgba(255, 255, 255, 0.5);
     z-index: 10; }
-    @media all and (min-width: 768px) {
-      .p-moves-content__texts {
-        font-size: 1.5vw; } }
     @media all and (max-width: 767px) {
       .p-moves-content__texts {
-        font-size: 1rem; } }
+        font-size: 1.25rem;
+        line-height: 2; } }
+    @media all and (min-width: 768px) {
+      .p-moves-content__texts {
+        font-size: 1.5vw;
+        line-height: 2; } }
     @media all and (min-width: 1367px) {
       .p-moves-content__texts {
-        font-size: 1.2rem; } }
-    @media all and (min-width: 768px) {
-      .p-moves-content__texts rt {
-        font-size: .01vw; } }
-    @media all and (max-width: 767px) {
-      .p-moves-content__texts rp, .p-moves-content__texts rt {
-        display: none; } }
+        font-size: 1.75rem;
+        line-height: 2; } }
+    .p-moves-content__texts ruby rt {
+      font-size: .001vw; }
 
 .p-moves-gh {
   height: 100%;
@@ -1107,7 +1110,6 @@ textarea::selection {
       @media all and (min-width: 768px) {
         .p-moves-gh__link::after {
           width: calc(100% - 4rem);
-          width: 100%;
           left: 4rem;
           bottom: .8rem; } }
       @media all and (max-width: 767px) {

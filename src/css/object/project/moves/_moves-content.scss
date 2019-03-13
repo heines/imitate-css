@@ -20,34 +20,32 @@
     top: 3rem;
     left: 3rem;
     color: #f5cece;
+    font-size: 1.2rem;
     text-decoration: none;
     cursor: pointer;
     z-index: 11;
   }
   &__texts {
     position: relative;
-    z-index: 10;
     padding: 10vw;
+    font-family: 'Noto Serif JP', serif;
     color: rgba(#fff, 0.5);
     z-index: 10;
+    @include l-mobile {
+      font-size: 1.25rem;
+      line-height: 2;
+    }
     @include l-more-than-mobile {
       font-size: 1.5vw;
-    }
-    @include l-mobile {
-      font-size: 1rem;
+      line-height: 2;
     }
     @include l-pc-l {
-      font-size: 1.2rem;
+      font-size: 1.75rem;
+      line-height: 2;
     }
-
-    & rt {
-      @include l-more-than-mobile {
-        font-size: .01vw;
-      }
-    }
-    & rp, & rt {
-      @include l-mobile {
-        display: none;
+    ruby {
+      rt {
+        font-size: .001vw;
       }
     }
   }

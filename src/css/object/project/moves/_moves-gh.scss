@@ -47,7 +47,6 @@
       transition-delay: 0s;
       @include l-more-than-mobile {
         width: calc(100% - 4rem);
-        width: 100%;
         left: 4rem;
         bottom: .8rem;
       }
