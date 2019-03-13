@@ -665,47 +665,6 @@ textarea::selection {
   margin-top: 0;
   margin-bottom: 2em; }
 
-.p-background-image {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-size: cover;
-  opacity: 0;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform; }
-  .p-background-image--00 {
-    background-image: url("../img/index/bg.jpg"); }
-  .p-background-image--01 {
-    background-image: url("../img/page01/bg.jpg"); }
-  .p-background-image--02 {
-    background-image: url("../img/page02/bg.jpg"); }
-  .p-background-image--03 {
-    background-image: url("../img/page03/bg.jpg"); }
-  .p-background-image:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .p-background-image.is-scale {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-
 .p-contents-overlay {
   position: fixed;
   top: 0;
@@ -755,49 +714,6 @@ textarea::selection {
   .p-index-content a {
     text-decoration: none;
     color: #555; }
-
-.p-index-header {
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #fff;
-  text-align: center; }
-  .p-index-header__title {
-    line-height: 1.1;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 400; }
-    @media all and (min-width: 1025px) {
-      .p-index-header__title {
-        font-size: 64px;
-        font-size: 4rem; } }
-    @media all and (min-width: 768px) and (max-width: 1024px) {
-      .p-index-header__title {
-        font-size: 56px;
-        font-size: 3.5rem; } }
-    @media all and (max-width: 767px) {
-      .p-index-header__title {
-        font-size: 42px;
-        font-size: 2.625rem; } }
-  @media all and (max-width: 767px) and (max-width: 414px) {
-    .p-index-header__title {
-      font-size: 13.125vw; } }
-  @media all and (max-width: 767px) and (min-width: 415px) {
-    .p-index-header__title {
-      font-size: 54.3375px; } }
-  .p-index-header__excerpt {
-    margin: 0; }
-  .p-index-header__btn {
-    display: inline-block;
-    margin-top: 30px; }
 
 .p-lower-header {
   width: 100vw;
