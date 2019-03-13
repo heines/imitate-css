@@ -17,10 +17,10 @@
   }
   &__link {
     position: absolute;
-    top: 3rem;
-    left: 3rem;
+    top: calc((10/16) * 3rem);
+    left: calc((10/16) * 3rem);
     color: #f5cece;
-    font-size: 1.2rem;
+    font-size: calc((10/16) * 1.2rem);
     text-decoration: none;
     cursor: pointer;
     z-index: 11;
@@ -33,7 +33,7 @@
     z-index: 10;
     @include l-mobile {
       padding-top: 15vw;
-      font-size: 1.25rem;
+      font-size: calc((10/16) * 1.25rem);
       line-height: 2;
     }
     @include l-more-than-mobile {
@@ -41,7 +41,7 @@
       line-height: 2;
     }
     @include l-pc-l {
-      font-size: 1.75rem;
+      font-size: calc((10/16) * 1.75rem);
       line-height: 2;
     }
     ruby {

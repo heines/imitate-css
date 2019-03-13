@@ -1,9 +1,9 @@
 .p-moves-btn {
-  width: 3rem;
-  height: 3rem;
+  width: calc((10/16) * 3rem);
+  height: calc((10/16) * 3rem);
   position: absolute;
   right: 5vw;
-  top: 3rem;
+  top: calc((10/16) * 3rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,8 @@
   appearance:none;
   z-index: 15;
   figure {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: calc((10/16) * 1.5rem);
+    height: calc((10/16) * 1.5rem);
     display: block;
   }
   svg {

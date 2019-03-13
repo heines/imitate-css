@@ -968,16 +968,16 @@ textarea::selection {
   background-color: #1f1f1f; }
   @media all and (min-width: 768px) {
     .p-moves-body {
-      font-size: 2.4rem;
+      font-size: calc( (10/16) * 2.4rem);
       line-height: 1.35;
       font-weight: 400;
-      letter-spacing: -.025rem; } }
+      letter-spacing: calc((10/16) * (-0.025rem)); } }
   @media all and (max-width: 767px) {
     .p-moves-body {
-      font-size: 1.4rem;
+      font-size: calc( (10/16) * 1.4rem);
       line-height: 1.35;
       font-weight: 400;
-      letter-spacing: -.025rem; } }
+      letter-spacing: calc((10/16) * (-0.025rem)); } }
 
 .p-moves-base {
   width: 100%;
@@ -1013,10 +1013,10 @@ textarea::selection {
     pointer-events: none; }
   .p-moves-content__link {
     position: absolute;
-    top: 3rem;
-    left: 3rem;
+    top: calc((10/16) * 3rem);
+    left: calc((10/16) * 3rem);
     color: #f5cece;
-    font-size: 1.2rem;
+    font-size: calc((10/16) * 1.2rem);
     text-decoration: none;
     cursor: pointer;
     z-index: 11; }
@@ -1029,7 +1029,7 @@ textarea::selection {
     @media all and (max-width: 767px) {
       .p-moves-content__texts {
         padding-top: 15vw;
-        font-size: 1.25rem;
+        font-size: calc((10/16) * 1.25rem);
         line-height: 2; } }
     @media all and (min-width: 768px) {
       .p-moves-content__texts {
@@ -1037,7 +1037,7 @@ textarea::selection {
         line-height: 2; } }
     @media all and (min-width: 1367px) {
       .p-moves-content__texts {
-        font-size: 1.75rem;
+        font-size: calc((10/16) * 1.75rem);
         line-height: 2; } }
     .p-moves-content__texts ruby rt {
       font-size: .01vw; }
@@ -1048,7 +1048,7 @@ textarea::selection {
   position: fixed;
   z-index: 1;
   background-color: #181818;
-  background-size: 100rem auto;
+  background-size: calc((10/16) * 100rem) auto;
   background-position: 50% 0; }
   .p-moves-gh__btn {
     opacity: 0;
@@ -1062,24 +1062,24 @@ textarea::selection {
     align-items: center;
     position: absolute;
     left: 5vw;
-    bottom: 4rem;
+    bottom: calc((10/16) * 4rem);
     text-decoration: none;
     pointer-events: none;
     color: #f5cece;
     font-weight: 500;
-    line-height: 2.5rem;
+    line-height: calc((10/16) * 2.5rem);
     white-space: nowrap;
     background-color: inherit;
     z-index: 1;
     opacity: 0; }
     @media all and (min-width: 768px) {
       .p-moves-gh__link {
-        line-height: 4rem; } }
+        line-height: calc((10/16) * 4rem); } }
     @media all and (max-width: 767px) {
       .p-moves-gh__link {
-        line-height: 2.5rem; } }
+        line-height: calc((10/16) * 2.5rem); } }
     .p-moves-gh__link::after {
-      height: .2rem;
+      height: calc((10/16) * .2rem);
       position: absolute;
       background-color: #f5cece;
       content: '';
@@ -1112,14 +1112,14 @@ textarea::selection {
       transition-delay: 0s; }
       @media all and (min-width: 768px) {
         .p-moves-gh__link::after {
-          width: calc(100% - 4rem);
-          left: 4rem;
-          bottom: .8rem; } }
+          width: calc(100% - (10/16) * 4rem);
+          left: calc((10/16) * 4rem);
+          bottom: calc((10/16) * .8rem); } }
       @media all and (max-width: 767px) {
         .p-moves-gh__link::after {
-          width: calc(100% - 2.5rem);
-          left: 2.5rem;
-          bottom: .4rem; } }
+          width: calc(100% - (10/16) * 2.5rem);
+          left: calc((10/16) * 2.5rem);
+          bottom: calc((10/16) * .4rem); } }
     .p-moves-gh__link:hover::after {
       opacity: 1;
       -webkit-animation-name: underline-in;
@@ -1140,14 +1140,14 @@ textarea::selection {
       animation-play-state: running; }
   @media all and (min-width: 768px) {
     .p-moves-gh__link-fig {
-      width: 2.5rem;
-      height: 2.5rem;
-      margin-right: 1.5rem; } }
+      width: calc((10/16) * 2.5rem);
+      height: calc((10/16) * 2.5rem);
+      margin-right: calc((10/16) * 1.5rem); } }
   @media all and (max-width: 767px) {
     .p-moves-gh__link-fig {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-right: 1rem; } }
+      width: calc((10/16) * 1.5rem);
+      height: calc((10/16) * 1.5rem);
+      margin-right: calc((10/16) * 1rem); } }
   .p-moves-gh__link-fig svg {
     fill: #f5cece;
     display: block; }
@@ -1419,11 +1419,11 @@ textarea::selection {
         color: #939393; }
 
 .p-moves-btn {
-  width: 3rem;
-  height: 3rem;
+  width: calc((10/16) * 3rem);
+  height: calc((10/16) * 3rem);
   position: absolute;
   right: 5vw;
-  top: 3rem;
+  top: calc((10/16) * 3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1443,8 +1443,8 @@ textarea::selection {
   appearance: none;
   z-index: 15; }
   .p-moves-btn figure {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: calc((10/16) * 1.5rem);
+    height: calc((10/16) * 1.5rem);
     display: block; }
   .p-moves-btn svg {
     fill: #f5cece;

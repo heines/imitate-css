@@ -4,15 +4,15 @@
   font-family: 'Biryani', sans-serif;
   background-color: #1f1f1f;
   @include l-more-than-mobile {
-    font-size: 2.4rem;
+    font-size: calc( (10/16) * 2.4rem);
     line-height: 1.35;
     font-weight: 400;
-    letter-spacing: -.025rem;
+    letter-spacing: calc((10/16) * (-0.025rem));
   }
   @include l-mobile {
-    font-size: 1.4rem;
+    font-size: calc( (10/16) * 1.4rem);
     line-height: 1.35;
     font-weight: 400;
-    letter-spacing: -.025rem;
+    letter-spacing: calc((10/16) * (-0.025rem));
   }
 }

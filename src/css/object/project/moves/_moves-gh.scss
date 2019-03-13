@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1;
   background-color: #181818;
-  background-size: 100rem auto;
+  background-size: calc((10/16) * 100rem) auto;
   background-position: 50% 0;
   &__btn {
     opacity: 0;
@@ -15,24 +15,24 @@
     align-items: center;
     position: absolute;
     left: 5vw;
-    bottom: 4rem;
+    bottom: calc((10/16) * 4rem);
     text-decoration: none;
     pointer-events: none;
     color: #f5cece;
     font-weight: 500;
-    line-height: 2.5rem;
+    line-height: calc((10/16) * 2.5rem);
     white-space: nowrap;
     background-color: inherit;
     z-index: 1;
     opacity: 0;
     @include l-more-than-mobile {
-      line-height: 4rem;
+      line-height: calc((10/16) * 4rem);
     }
     @include l-mobile {
-      line-height: 2.5rem;
+      line-height: calc((10/16) * 2.5rem);
     }
     &::after {
-      height: .2rem;
+      height: calc((10/16) * .2rem);
       position: absolute;
       background-color: #f5cece;
       content: '';
@@ -51,14 +51,14 @@
       transition-timing-function: ease;
       transition-delay: 0s;
       @include l-more-than-mobile {
-        width: calc(100% - 4rem);
-        left: 4rem;
-        bottom: .8rem;
+        width: calc(100% - (10/16) * 4rem);
+        left: calc((10/16) * 4rem);
+        bottom: calc((10/16) * .8rem);
       }
       @include l-mobile {
-        width: calc(100% - 2.5rem);
-        left: 2.5rem;
-        bottom: .4rem;
+        width: calc(100% - (10/16) * 2.5rem);
+        left: calc((10/16) * 2.5rem);
+        bottom: calc((10/16) * .4rem);
       }
     }
     &:hover {
@@ -77,14 +77,14 @@
   }
   &__link-fig {
     @include l-more-than-mobile {
-      width: 2.5rem;
-      height: 2.5rem;
-      margin-right: 1.5rem;
+      width: calc((10/16) * 2.5rem);
+      height: calc((10/16) * 2.5rem);
+      margin-right: calc((10/16) * 1.5rem);
     }
     @include l-mobile {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-right: 1rem;
+      width: calc((10/16) * 1.5rem);
+      height: calc((10/16) * 1.5rem);
+      margin-right: calc((10/16) * 1rem);
     }
     & svg {
       fill: #f5cece;
