@@ -18,6 +18,14 @@
         "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
         "path": "/moves/"
       }
+    },
+    "agenturloop": {
+      "index": {
+        "id": "agenturloop",
+        "title": "",
+        "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
+        "path": "/agentur-loop/"
+      }
     }
   }
 }

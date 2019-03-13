@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ImitateCss</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="It's a utility JavaScript asset that manages asynchronous page transition on a website.">
+    <meta name="keywords" content="imitate">
+    <style>.l-page { visibility: hidden; }</style>
+    <link rel="preload" as="style" href="/imitate-css/css/main.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="icon" href="/imitate-css/img/common/icon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imitate-css/img/common/app_icon.png">
+    <meta name="msapplication-TileImage" content="/imitate-css/img/common/ms_tileimage.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#fff">
+    <meta property="og:title" content="ImitateCss">
+    <meta property="og:site_name" content="ImitateCss">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="It's a utility JavaScript asset that manages asynchronous page transition on a website.">
+    <meta property="og:url" content="https://heines.github.io/imitate-css/agentur-loop/">
+    <meta property="og:image" content="https://heines.github.io/imitate-css/img/common/ogp.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ImitateCss">
+    <meta name="twitter:description" content="It's a utility JavaScript asset that manages asynchronous page transition on a website.">
+    <meta name="twitter:image" content="https://heines.github.io/imitate-css/img/common/ogp.jpg">
+  </head>
+  <body>
+    <div class="l-page js-pjax-page" data-page-id="agenturloop">
+      <div class="p-contents-overlay js-pjax-overlay is-expand"></div>
+      <div class="p-progress js-pjax-progress">
+        <div class="p-progress__marker"></div>
+      </div>
+      <div class="l-dummy-scroll js-dummy-scroll"></div>
+      <div class="l-contents js-contents">
+        <div class="js-pjax-contents">
+          <h1>moves</h1>
+        </div>
+      </div>
+    </div>
+    <script src="/imitate-css/js/main_with_preload.js" async></script>
+  </body>
+</html>
