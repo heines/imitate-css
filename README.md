@@ -1,9 +1,9 @@
 # imitate-css
-## - 2019Mar14th
-### site
+## 2019Mar14th
+### 模擬対象Webページ
 https://moves.basicagency.com/
-### 模擬内容
-グローバルメニュー部登場アニメーション
+### 模擬対象詳細
+グローバルメニュー部 登場アニメーション
 ### 所感
 - （このページに限らず、）easeを使っているサイトが存外に多い
 - remを単位としているサイトが多い。（→レスポンシブ対応のため）
@@ -23,7 +23,7 @@ https://moves.basicagency.com/
 - 元Webページではhtmlのフォントサイズを10pxとしていますが、現在使用しているリポジトリでは様々なWebページの模擬を想定しているため、htmlのフォントサイズの変更は行いませんでした（= 16px）
 
 
-## 2019Feb21st
+## 2019Feb21st（実装中）
 
 site: https://www.agentur-loop.com/cases
 
