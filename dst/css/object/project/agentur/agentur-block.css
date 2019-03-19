@@ -1,0 +1,12 @@
+.p-agentur-block {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 90px; }
+  .p-agentur-block--inner {
+    max-width: 1600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }

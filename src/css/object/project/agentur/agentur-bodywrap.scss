@@ -1,6 +1,22 @@
 .p-agentur-bodywrap {
   width: 100%;
   position: relative;
-  padding-top: 70px;
-
+  @include l-more-than-mobile {
+    padding-top: 80px;
+  }
+  @include l-mobile {
+    padding-top: 50px;
+  }
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: opasity .5s cubic-bezier(.215, .61, .355, 1), visibility 0s .5s, z-index 0s .5s;
+  }
 }
