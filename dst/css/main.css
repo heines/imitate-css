@@ -1366,6 +1366,140 @@ textarea::selection {
     fill: #f5cece;
     display: block; }
 
+.p-agentur-block {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 90px; }
+  .p-agentur-block::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .p-agentur-block__big {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin-left: 30px;
+    margin-right: 30px; }
+  .p-agentur-block--inner {
+    max-width: 1600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+.p-agentur-bodywrap {
+  width: 100%;
+  position: relative; }
+  @media all and (min-width: 768px) {
+    .p-agentur-bodywrap {
+      padding-top: 80px; } }
+  @media all and (max-width: 767px) {
+    .p-agentur-bodywrap {
+      padding-top: 50px; } }
+  .p-agentur-bodywrap::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-transition: opasity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), visibility 0s 0.5s, z-index 0s 0.5s;
+    transition: opasity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), visibility 0s 0.5s, z-index 0s 0.5s; }
+
+.p-agentur-content-wrap {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 5; }
+
+.p-agentur-content {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 1;
+  background-color: #f9f9f9; }
+
+.p-agentur-contents {
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+  width: 100%; }
+
+.p-agentur-teaser__logo {
+  top: 0;
+  width: 75%;
+  margin-left: 12.5%;
+  padding-left: 0;
+  padding-right: 0; }
+  .p-agentur-teaser__logo__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 120px;
+    height: 200px;
+    background-image: url("/img/tv.svg"); }
+
+.p-agentur-teaser__content, .p-agentur-teaser__logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fff;
+  z-index: 10; }
+
+.p-agentur-teaser__content {
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.p-agentur-teaser__item {
+  width: 33.33333%;
+  display: block;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+  text-align: left;
+  overflow: hidden;
+  float: left; }
+  .p-agentur-teaser__item__inner {
+    position: relative;
+    overflow: hidden;
+    margin: 10px; }
+
+.p-agentur-teaser__img {
+  position: relative;
+  z-index: 1; }
+
+.p-agentur-teaser__vid {
+  position: absolute;
+  top: -2px;
+  left: -500px;
+  right: -500px;
+  bottom: -2px;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s; }
+
 .u-d-b {
   display: block; }
 
