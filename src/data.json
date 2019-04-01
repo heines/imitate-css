@@ -26,6 +26,14 @@
         "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
         "path": "/agentur-loop/"
       }
+    },
+    "shobon": {
+      "index": {
+        "id": "shobon",
+        "title": "",
+        "description": "It's a utility JavaScript asset that manages asynchronous page transition on a website.",
+        "path": "/shobon/"
+      }
     }
   }
 }

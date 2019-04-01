@@ -7,12 +7,19 @@ block vars
 block content
   .p-index-content
     h1
+      |imitate CSS
+    h2
       |imitate
     ol
       li
         a(href="./moves/") moves
       li
         a(href="./agentur-loop/") agentur-loop
+    h2
+      |original
+    ol
+      li
+        a(href="./shobon/") shobon
     script.
       const ua = window.navigator.userAgent;
       const link = document.querySelector('link[as=style]');
