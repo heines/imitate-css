@@ -1,0 +1,57 @@
+.p-shobon-contents {
+  background-color: $s-color-base-light;
+  position: relative;
+  &__box {
+    height: 100vh;
+    position: relative;
+    &--1 {
+    }
+    &--2 {
+      color: $s-color-primary;
+      background-color: #d1eefb;
+    }
+  }
+  &__textarea {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &--2 {
+      background-color: #d1eefb;
+    }
+  }
+  &__title {
+    height: (300px / 1200px) * 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -100px;
+    left: -10px;
+    margin: 0;
+    @include fontSizeAll(300, 150, 25);
+    line-height: 1;
+    color: $s-color-base-light;
+    z-index: 2;
+    &--back {
+      width: 55%;
+      margin: 0;
+      color: $s-color-base-dark;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    height: 50%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    margin: auto;
+    line-height: 2;
+    z-index: 10;
+  }
+}
