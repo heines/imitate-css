@@ -1518,13 +1518,34 @@ textarea::selection {
       color: #191970;
       background-color: #d1eefb; }
   .p-shobon-contents__textarea {
-    width: 55%;
+    width: 80%;
     height: 100%;
     position: relative;
     overflow: hidden;
     z-index: 2; }
     .p-shobon-contents__textarea--2 {
       background-color: #d1eefb; }
+  .p-shobon-contents__main {
+    line-height: 1;
+    color: #00171f; }
+    @media all and (min-width: 1025px) {
+      .p-shobon-contents__main {
+        font-size: 300px;
+        font-size: 18.75rem; } }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      .p-shobon-contents__main {
+        font-size: 150px;
+        font-size: 9.375rem; } }
+    @media all and (max-width: 767px) {
+      .p-shobon-contents__main {
+        font-size: 25px;
+        font-size: 1.5625rem; } }
+  @media all and (max-width: 767px) and (max-width: 414px) {
+    .p-shobon-contents__main {
+      font-size: 7.8125vw; } }
+  @media all and (max-width: 767px) and (min-width: 415px) {
+    .p-shobon-contents__main {
+      font-size: 32.34375px; } }
   .p-shobon-contents__title {
     height: 25%;
     width: 100%;

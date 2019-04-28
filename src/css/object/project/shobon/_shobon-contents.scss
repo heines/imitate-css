@@ -12,7 +12,7 @@
     }
   }
   &__textarea {
-    width: 55%;
+    width: 80%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -20,6 +20,11 @@
     &--2 {
       background-color: #d1eefb;
     }
+  }
+  &__main {
+    @include fontSizeAll(300, 150, 25);
+    line-height: 1;
+    color: $s-color-base-dark;
   }
   &__title {
     height: (300px / 1200px) * 100%;
